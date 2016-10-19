@@ -1,0 +1,310 @@
+0. Pokazati popravak od juèer
+	- u Edit.cshtml - drugaèiji hidden fields za kolekciju - treba sa for i [i] da bi se generirao html koji æe model binder znati povezati
+	- @Html.TextBoxFor(model => model.Account.Code, new { disabled = "disabled"} )
+
+1. BankAccount/Edit.cshtml
+	- AJAX umjesto cijelog POSTa
+
+	1.1 - dodati id="divMessage" na element u kojem æemo ispisati poruku nakon spremanja koja æe doæi kroz JSON/AJAX a ne puni respons i model
+	1.2 - Html.BeginForm mijenjamo u 
+
+@using (Ajax.BeginForm("EditAjax", "BankAccount", 
+    new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "divMessage" }))
+
+	1.3 - JSON result akcija na kontroleru - copy paste Edit akcije, preimenovanje i return JSON je promjena
+
+	[HttpPost]
+        public virtual ActionResult EditAjax(BankAccountViewModel model)
+        {
+
+            //TODO Manager Save metoda
+            if (ModelState.IsValid)
+            {
+                //spremi ako je valid
+                //manager ili direktno WCF servis
+            }
+
+            model.Message = "Spašeno";
+
+            return Json("AJAX poruka: Spašeno");
+        }
+
+
+2. datatables.js za BankAccount listu
+
+	2.1 - view ListDataTables.cshtml
+------
+nema modela? sve ide ajaxom - ako nešto treba treba onda dodati model
+------ uvodno
+@{
+    ViewBag.Title = "DataTables.js AJAX grid";
+}
+---- za skripte
+@section Scripts{
+    <script>
+        var viewname = "ListDataTables";
+       
+        var editPath = '@Url.Action(MVC.BankAccount.ActionNames.Edit)';
+    </script>
+    @Scripts.Render("~/bundles/views")
+}
+------ h2 title
+<h2>Bank accounts list</h2>
+
+------ tabela
+<div>
+    <table id="dtBankAccountList" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th class="no-sort">Id</th>
+                <th class="no-sort">Code</th>
+                <th class="no-sort">Name</th>
+                <th class="no-sort">IBAN</th>
+                <th class="no-sort">Status</th>
+                <th class="no-sort">Action</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+	2.1.a - ne zaboraviti akciju na kontroleru
+ public virtual ActionResult ListDataTables()
+        {
+           
+            return View();
+        }
+
+	2.2 manager akcija koja kreira listu za model BankAccount... search, sort, paging....
+
+ public static DataTablesResponseModel<BankAccountModel> GetBankAccountDataTable(int pageSize, int position, string search, int sortColumnId, string sortDirection)
+        {
+            List<BankAccountModel> items = new List<BankAccountModel>();
+
+            var bankAccountList = GetAccounts();
+
+            int totalCount = bankAccountList.Count();
+
+            var query = bankAccountList.Select(x => x.Account).AsQueryable();
+
+            if (search != String.Empty)
+            {
+                query = query.Where(x => x.Name.Contains(search) || x.IBAN.Contains(search) || x.Code.Contains(search));
+            }
+
+            string sortColumn = "Code";
+
+            switch (sortColumnId)
+            {
+                case 1:
+                    sortColumn = "Name";
+                    break;
+                case 2:
+                    sortColumn = "Description";
+                    break;
+                case 3:
+                    sortColumn = "IBAN";
+                    break;
+                default:
+                    sortColumn = "Code";
+                    break;
+            }
+
+            string direction = (sortDirection == "DESC") ? "DESC" : "ASC";
+            // Apply sorting:
+            //dynamic from System.Linq.Dynamic in Common Exstensions
+            query = query.OrderBy(sortColumn + " " + sortDirection);
+
+            //paging
+            query = query.Skip(position).Take(pageSize);
+
+            DataTablesResponseModel<BankAccountModel> model = new DataTablesResponseModel<BankAccountModel>(query.ToList(), totalCount, totalCount, 0);
+
+            return model;
+        }
+
+	2.3. controller akcija koja æe vratiti listu/paging/sorting
+
+public virtual ActionResult GetBankAccountListAjax(DataTablesRequestModel model)
+        {
+            int sortColumnId = 0;
+            string sortDirection = String.Empty;
+
+            if (model.Order.Count() > 0)
+            {
+                sortColumnId = model.Order.FirstOrDefault().Column;
+                sortDirection = model.Order.FirstOrDefault().Dir;
+            }
+
+            var result = BankAccountsManager.GetBankAccountDataTable(model.Length, model.Start, model.Search.Value, sortColumnId, sortDirection);
+
+            return Json(result,
+     JsonRequestBehavior.AllowGet);
+        }
+
+	2.4. JavaScript poziv kontroler akcija
+
+function initDataTableBankAccounts() {
+
+    $('#dtBankAccountList').DataTable({
+        ajax: ajaxPath,
+        processing: false,
+        serverSide: true,
+        lengthChange: false,
+        pageLength: 4,
+        searching: true,
+        ordering: true,
+        columns: [
+            {
+                data: "Id",
+                ordering: true,
+            },
+           {
+               data: "Code",
+               ordering: true,
+           },
+            {
+                data: "Name",
+                ordering: true,
+            },
+           {
+               data: "IBAN",
+               ordering: true,
+           },
+           {
+                data: "Status",
+                ordering: true,
+            },
+           {
+               data: "Id",
+               ordering: false,
+               render: function (obj, type, f) {
+                       return "<a href='" + editPath +"/" + f.Id + "'>Edit...<a>";
+               }
+           },
+        ],
+        language: {
+            processing: "Uèitavanje podataka...",
+            search: "Pretraži:",
+            loadingRecords: "Uæitavanje...",
+            zeroRecords: "Ne postoji ni jedan zapis",
+            emptyTable: "Ne postoji ni jedan zapis",
+            info: "Od _START_ do  _END_ (od ukupno _TOTAL_)",
+            infoEmpty: "Nema potvrda za prikazati",
+            paginate: {
+                first: "Prva",
+                previous: "Natrag",
+                next: "Naprijed",
+                last: "Zadnja"
+            }
+        }
+    });
+
+}
+
+$(function () {
+    console.log('tu sam');
+    if (viewname == "ListDataTables") {
+        $(document).ready(function () {
+            initDataTableBankAccounts();
+        });
+    }
+});
+
+	2.5 - ukljuèiti novu skriptu u bundles
+
+~/bundles/views - dodati posebno ili zvjezdicu *.js
+
+	2.6 - dodati ajaxPath u view
+
+ - prvo na T4MVC Run Custom tool 
+- pa nakon toga BUILD
+- pa dodati u script render dio u cshtml
+
+var ajaxPath = '@Url.Action(MVC.BankAccount.ActionNames.GetBankAccountListAjax)';
+
+
+3. Autocomplete - na polje Name
+
+	3.1 ukljuèiti skriptu i css u bundling
+----- jQuery UI
+"~/Scripts/jquery-ui-1.8.11.js"
+
+---- kopirati file iz themes i dati u bundle
+"~/Content/jquery.ui.autocomplete.css"
+
+	3.2 Treba nam model za "prijevoz" JSONa
+
+ public class AutocompleteModel
+    {
+        
+        public int ID { get; set; }
+
+        public string Value { get; set; }
+        
+        public string Code { get; set; }
+    }
+
+
+	3.3 Manager i Controller pripremiti
+---manager
+ public static List<AutocompleteModel> GetAccounts(string term)
+        {
+            var accounts = GetAccounts();
+            var autocompleteModel = accounts.Where(x => x.Account.Name.StartsWith(term)).Select(x => new AutocompleteModel { ID = x.Account.Id, Code = x.Account.Name, Value = x.Account.Name }).ToList();
+
+            return autocompleteModel;
+
+        }
+
+---- controller
+
+ public JsonResult GetNameAutocomplete(string term)
+        {
+            var result = BankAccountsManager.GetAccounts(term);
+
+            return Json(result);
+        }
+
+
+	3.4 JavaScript
+
+<script language="JavaScript">
+                $(document).ready(function (e) {
+
+                    $("#Account_Name").autocomplete({
+                        minLength: 2,
+                        source: function (request, response) {
+                            $.ajax({
+                                url: '@Url.Action("GetNameAutocomplete", "BankAccount")',
+                                data: {
+                                    term: request.term
+                                },
+                                dataType: "json",
+                                type: "POST",
+                                beforeSend: function () {
+                                    //$(".progress-bar").animate({
+                                    //    width: "100%"
+                                    //}, 1000);
+                                },
+                                success: function (data) {
+                                    //$(".progress-bar").stop();
+                                    //$(".progress-bar").animate({
+                                    //    width: "0%"
+                                    //}, 20);
+                                    response($.map(data, function (value) {
+                                        return {
+                                            label: value.Value,
+                                            value: value.ID,
+                                            code: value.Code
+                                        };
+                                    }));
+                                }
+                            });
+                        }
+                    });
+                });
+
+
+            </script>
+
+
