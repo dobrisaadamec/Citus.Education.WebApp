@@ -8,3 +8,8 @@ E:\Predavanja\RBA_Sarajevo\Citus.Education.WebApp.Sample_FINISH\Citus.Education.
 E:\Predavanja\RBA_Sarajevo\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Generators\bin\Release\Citus.Education.WebApp.Sample.Generators.pdb
 E:\Predavanja\RBA_Sarajevo\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Generators\obj\Release\Citus.Education.WebApp.Sample.Generators.dll
 E:\Predavanja\RBA_Sarajevo\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Generators\obj\Release\Citus.Education.WebApp.Sample.Generators.pdb
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Generators\bin\Release\Citus.Education.WebApp.Sample.Generators.dll.config
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Generators\bin\Release\Citus.Education.WebApp.Sample.Generators.dll
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Generators\bin\Release\Citus.Education.WebApp.Sample.Generators.pdb
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Generators\obj\Release\Citus.Education.WebApp.Sample.Generators.dll
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Generators\obj\Release\Citus.Education.WebApp.Sample.Generators.pdb

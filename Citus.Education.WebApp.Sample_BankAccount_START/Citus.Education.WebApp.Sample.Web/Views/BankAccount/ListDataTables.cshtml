@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "DataTables.js AJAX grid";
+}
+
+@section Scripts{
+    <script>
+        var viewname = "ListDataTables";
+        var ajaxPath = '@Url.Action(MVC.BankAccount.ActionNames.GetBankAccountListAjax)';
+        var editPath = '@Url.Action(MVC.BankAccount.ActionNames.Edit)';
+    </script>
+    @Scripts.Render("~/bundles/views")
+}
+
+<h2>Bank accounts list datatables.js grid</h2>
+
+<div>
+    <table id="dtBankAccountList" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th class="no-sort">Id</th>
+                <th class="no-sort">Code</th>
+                <th class="no-sort">Name</th>
+                <th class="no-sort">IBAN</th>
+                <th class="no-sort">Status</th>
+                <th class="no-sort">Action</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+

@@ -5,9 +5,14 @@
 }
 
 <h2>Edit</h2>
+<br/>
+<br />
+<br />
 
-
-@using (Html.BeginForm())
+@using (Ajax.BeginForm("EditAjax", 
+                new AjaxOptions {
+                    HttpMethod = "POST",
+                    UpdateTargetId = "divMessage" }))
 {
     @Html.AntiForgeryToken()
 
@@ -16,10 +21,10 @@
         @Html.HiddenFor(model => model.Account.Id)
         @if (Model.StatusList != null)
         {
-            for (var i = 0; i < Model.StatusList.Count(); i++)
+            @*for (var i = 0; i < Model.StatusList.Count(); i++)
             {
                 @Html.HiddenFor(m => m.StatusList[i])
-            }
+            }*@
         }
 
         <div class="form-group">
@@ -27,7 +32,7 @@
                 @Html.LabelFor(model => Model.Account.Code)
             </div>
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.Account.Code)
+                @Html.TextBoxFor(model => model.Account.Code, new { disabled = "disabled" })
             </div>
         </div>
         <div class="form-group">
@@ -38,6 +43,42 @@
                 @Html.TextBoxFor(model => model.Account.Name)
                 @Html.ValidationMessageFor(model => model.Account.Name)
             </div>
+            <script language="JavaScript">
+                $(document).ready(function (e) {
+                    $("#Account_Name").autocomplete({
+                        minLength: 3,
+                        source: function (request, response) {
+                            $.ajax({
+                                url: '@Url.Action("GetNameAutocomplete", "BankAccount")',
+                                data: {
+                                    term: request.term
+                                },
+                                dataType: "json",
+                                type: "POST",
+                                beforeSend: function () {
+                                    //$(".progress-bar").animate({
+                                    //    width: "100%"
+                                    //}, 1000);
+                                },
+                                success: function (data) {
+                                    //$(".progress-bar").stop();
+                                    //$(".progress-bar").animate({
+                                    //    width: "0%"
+                                    //}, 20);
+                                    response($.map(data, function (value) {
+                                        return {
+                                            label: value.Value,
+                                            value: value.Code,
+                                            code: value.Code
+                                        };
+                                    }));
+                                }
+                            });
+                        }
+                    });
+                });
+            </script>
+
         </div>
         <div class="form-group">
             <div class="col-md-2">
@@ -70,7 +111,7 @@
             </div>
         </div>
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
+            <div id="divMessage" class="col-md-offset-2 col-md-10">
                 Poruka: @Model.Message
             </div>
         </div>

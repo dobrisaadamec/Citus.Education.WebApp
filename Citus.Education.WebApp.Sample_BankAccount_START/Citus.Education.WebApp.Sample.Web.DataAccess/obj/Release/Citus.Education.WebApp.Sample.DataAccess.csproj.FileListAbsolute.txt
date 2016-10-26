@@ -16,3 +16,12 @@ E:\Predavanja\RBA_Sarajevo\Citus.Education.WebApp.Sample_FINISH\Citus.Education.
 E:\Predavanja\RBA_Sarajevo\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Web.DataAccess\bin\Release\EntityFramework.SqlServer.xml
 E:\Predavanja\RBA_Sarajevo\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Web.DataAccess\obj\Release\Citus.Education.WebApp.Sample.DataAccess.dll
 E:\Predavanja\RBA_Sarajevo\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Web.DataAccess\obj\Release\Citus.Education.WebApp.Sample.DataAccess.pdb
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Web.DataAccess\bin\Release\Citus.Education.WebApp.Sample.DataAccess.dll.config
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Web.DataAccess\bin\Release\Citus.Education.WebApp.Sample.DataAccess.dll
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Web.DataAccess\bin\Release\Citus.Education.WebApp.Sample.DataAccess.pdb
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Web.DataAccess\bin\Release\EntityFramework.dll
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Web.DataAccess\bin\Release\EntityFramework.SqlServer.dll
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Web.DataAccess\bin\Release\EntityFramework.xml
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Web.DataAccess\bin\Release\EntityFramework.SqlServer.xml
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Web.DataAccess\obj\Release\Citus.Education.WebApp.Sample.DataAccess.dll
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Web.DataAccess\obj\Release\Citus.Education.WebApp.Sample.DataAccess.pdb

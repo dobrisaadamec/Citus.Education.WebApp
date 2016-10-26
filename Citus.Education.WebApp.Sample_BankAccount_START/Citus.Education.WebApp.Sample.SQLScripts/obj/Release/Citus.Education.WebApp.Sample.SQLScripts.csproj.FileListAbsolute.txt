@@ -6,3 +6,7 @@ E:\Predavanja\RBA_Sarajevo\Citus.Education.WebApp.Sample_FINISH\Citus.Education.
 E:\Predavanja\RBA_Sarajevo\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.SQLScripts\bin\Release\Citus.Education.WebApp.Sample.SQLScripts.pdb
 E:\Predavanja\RBA_Sarajevo\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.SQLScripts\obj\Release\Citus.Education.WebApp.Sample.SQLScripts.dll
 E:\Predavanja\RBA_Sarajevo\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.SQLScripts\obj\Release\Citus.Education.WebApp.Sample.SQLScripts.pdb
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.SQLScripts\bin\Release\Citus.Education.WebApp.Sample.SQLScripts.dll
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.SQLScripts\bin\Release\Citus.Education.WebApp.Sample.SQLScripts.pdb
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.SQLScripts\obj\Release\Citus.Education.WebApp.Sample.SQLScripts.dll
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.SQLScripts\obj\Release\Citus.Education.WebApp.Sample.SQLScripts.pdb

@@ -57,6 +57,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ErrorMessages.resx</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\AutocompleteModel.cs" />
     <Compile Include="ViewModels\BankAccountModel.cs" />
     <Compile Include="ViewModels\BankAccountViewModel.cs" />
     <Compile Include="ViewModels\CvCompetenceEditViewModel.cs" />

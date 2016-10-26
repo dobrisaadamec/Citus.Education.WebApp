@@ -9,3 +9,9 @@ E:\Predavanja\RBA_Sarajevo\Citus.Education.WebApp.Sample_FINISH\Citus.Education.
 E:\Predavanja\RBA_Sarajevo\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Common\bin\Release\System.Data.SqlServerCe.dll
 E:\Predavanja\RBA_Sarajevo\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Common\obj\Release\Citus.Education.WebApp.Sample.Common.dll
 E:\Predavanja\RBA_Sarajevo\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Common\obj\Release\Citus.Education.WebApp.Sample.Common.pdb
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Common\bin\Release\Citus.Education.WebApp.Sample.Common.dll
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Common\bin\Release\Citus.Education.WebApp.Sample.Common.pdb
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Common\bin\Release\Elmah.dll
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Common\bin\Release\System.Data.SqlServerCe.dll
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Common\obj\Release\Citus.Education.WebApp.Sample.Common.dll
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Common\obj\Release\Citus.Education.WebApp.Sample.Common.pdb

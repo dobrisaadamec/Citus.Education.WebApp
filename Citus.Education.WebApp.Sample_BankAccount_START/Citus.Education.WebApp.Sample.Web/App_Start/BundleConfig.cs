@@ -10,7 +10,8 @@ namespace Citus.Education.WebApp.Sample.Web
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js",
-                        "~/Scripts/jquery.unobtrusive-ajax.js"));
+                        "~/Scripts/jquery.unobtrusive-ajax.js",
+               "~/Scripts/jquery-ui-1.8.11.js"));
           
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
@@ -30,12 +31,13 @@ namespace Citus.Education.WebApp.Sample.Web
          "~/Scripts/dataTables/dataTables*"));
 
             bundles.Add(new ScriptBundle("~/bundles/views").Include(
-                  "~/Scripts/Views/CvCompetenceList.js"));
+                  "~/Scripts/Views/*.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                  "~/Content/DataTables/css/jquery.dataTables.css",
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/jquery.ui.autocomplete.css"));
         }
     }
 }

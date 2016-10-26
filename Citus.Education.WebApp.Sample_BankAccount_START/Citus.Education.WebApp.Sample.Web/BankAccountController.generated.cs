@@ -65,6 +65,18 @@ namespace Citus.Education.WebApp.Sample.Web.Controllers
         {
             return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Edit);
         }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult EditAjax()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.EditAjax);
+        }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult GetBankAccountListAjax()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.GetBankAccountListAjax);
+        }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public BankAccountController Actions { get { return MVC.BankAccount; } }
@@ -83,6 +95,9 @@ namespace Citus.Education.WebApp.Sample.Web.Controllers
         {
             public readonly string Index = "Index";
             public readonly string Edit = "Edit";
+            public readonly string EditAjax = "EditAjax";
+            public readonly string ListDataTables = "ListDataTables";
+            public readonly string GetBankAccountListAjax = "GetBankAccountListAjax";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -90,6 +105,9 @@ namespace Citus.Education.WebApp.Sample.Web.Controllers
         {
             public const string Index = "Index";
             public const string Edit = "Edit";
+            public const string EditAjax = "EditAjax";
+            public const string ListDataTables = "ListDataTables";
+            public const string GetBankAccountListAjax = "GetBankAccountListAjax";
         }
 
 
@@ -100,6 +118,22 @@ namespace Citus.Education.WebApp.Sample.Web.Controllers
         public class ActionParamsClass_Edit
         {
             public readonly string id = "id";
+            public readonly string model = "model";
+        }
+        static readonly ActionParamsClass_EditAjax s_params_EditAjax = new ActionParamsClass_EditAjax();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_EditAjax EditAjaxParams { get { return s_params_EditAjax; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_EditAjax
+        {
+            public readonly string model = "model";
+        }
+        static readonly ActionParamsClass_GetBankAccountListAjax s_params_GetBankAccountListAjax = new ActionParamsClass_GetBankAccountListAjax();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_GetBankAccountListAjax GetBankAccountListAjaxParams { get { return s_params_GetBankAccountListAjax; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_GetBankAccountListAjax
+        {
             public readonly string model = "model";
         }
         static readonly ViewsClass s_views = new ViewsClass();
@@ -114,9 +148,11 @@ namespace Citus.Education.WebApp.Sample.Web.Controllers
             {
                 public readonly string Edit = "Edit";
                 public readonly string Index = "Index";
+                public readonly string ListDataTables = "ListDataTables";
             }
             public readonly string Edit = "~/Views/BankAccount/Edit.cshtml";
             public readonly string Index = "~/Views/BankAccount/Index.cshtml";
+            public readonly string ListDataTables = "~/Views/BankAccount/ListDataTables.cshtml";
         }
     }
 
@@ -157,6 +193,41 @@ namespace Citus.Education.WebApp.Sample.Web.Controllers
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Edit);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
             EditOverride(callInfo, model);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void EditAjaxOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, Citus.Education.WebApp.Sample.Models.ViewModels.BankAccountViewModel model);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult EditAjax(Citus.Education.WebApp.Sample.Models.ViewModels.BankAccountViewModel model)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.EditAjax);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
+            EditAjaxOverride(callInfo, model);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void ListDataTablesOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult ListDataTables()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ListDataTables);
+            ListDataTablesOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void GetBankAccountListAjaxOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, Citus.Education.WebApp.Sample.Web.Models.DataTablesRequestModel model);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult GetBankAccountListAjax(Citus.Education.WebApp.Sample.Web.Models.DataTablesRequestModel model)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.GetBankAccountListAjax);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
+            GetBankAccountListAjaxOverride(callInfo, model);
             return callInfo;
         }
 

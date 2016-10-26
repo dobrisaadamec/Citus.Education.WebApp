@@ -289,6 +289,7 @@ namespace Links
             public static string Url() { return T4MVCHelpers.ProcessVirtualPath(URLPATH); }
             public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(URLPATH + "/" + fileName); }
             public static readonly string CvCompetenceList_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/CvCompetenceList.min.js") ? Url("CvCompetenceList.min.js") : Url("CvCompetenceList.js");
+            public static readonly string ListDataTables_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/ListDataTables.min.js") ? Url("ListDataTables.min.js") : Url("ListDataTables.js");
         }
     
     }
@@ -483,6 +484,7 @@ namespace Links
             private const string URLPATH = "~/Content/images";
             public static string Url() { return T4MVCHelpers.ProcessVirtualPath(URLPATH); }
             public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(URLPATH + "/" + fileName); }
+            public static readonly string bih_png = Url("bih.png");
             public static readonly string gb_png = Url("gb.png");
             public static readonly string hr_png = Url("hr.png");
         }
@@ -707,6 +709,7 @@ namespace Links
                 public static class Assets
                 {
                     public const string CvCompetenceList_js = "~/Scripts/Views/CvCompetenceList.js"; 
+                    public const string ListDataTables_js = "~/Scripts/Views/ListDataTables.js"; 
                 }
             }
             public static class Assets

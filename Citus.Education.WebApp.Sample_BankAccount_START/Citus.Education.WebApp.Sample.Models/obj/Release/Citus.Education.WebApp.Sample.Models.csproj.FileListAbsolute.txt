@@ -16,3 +16,12 @@ E:\Predavanja\RBA_Sarajevo\Citus.Education.WebApp.Sample_FINISH\Citus.Education.
 E:\Predavanja\RBA_Sarajevo\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Models\bin\Release\bs\Citus.Education.WebApp.Sample.Models.resources.dll
 E:\Predavanja\RBA_Sarajevo\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Models\obj\Release\Citus.Education.WebApp.Sample.Models.ViewModels.App_LocalResources.ErrorMessages.bs.resources
 E:\Predavanja\RBA_Sarajevo\Citus.Education.WebApp.Sample_FINISH\Citus.Education.WebApp.Sample.Models\obj\Release\bs\Citus.Education.WebApp.Sample.Models.resources.dll
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Models\bin\Release\Citus.Education.WebApp.Sample.Models.dll
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Models\bin\Release\Citus.Education.WebApp.Sample.Models.pdb
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Models\bin\Release\bs\Citus.Education.WebApp.Sample.Models.resources.dll
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Models\obj\Release\Citus.Education.WebApp.Sample.Models.ViewModels.App_LocalResources.ErrorMessages.resources
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Models\obj\Release\Citus.Education.WebApp.Sample.Models.ViewModels.App_LocalResources.ErrorMessages.bs.resources
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Models\obj\Release\Citus.Education.WebApp.Sample.Models.csproj.GenerateResource.Cache
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Models\obj\Release\bs\Citus.Education.WebApp.Sample.Models.resources.dll
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Models\obj\Release\Citus.Education.WebApp.Sample.Models.dll
+E:\Predavanja\RBA_Sarajevo\GitHub\Citus.Education.WebApp.Sample_BankAccount_START\Citus.Education.WebApp.Sample.Models\obj\Release\Citus.Education.WebApp.Sample.Models.pdb

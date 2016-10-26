@@ -1,0 +1,11 @@
+﻿<img [src]="logoUrl" />
+<h1>{{pageTitle}}</h1>
+<h2>{{pero}}</h2>
+<h3>{{getVrijeme()}}</h3>
+
+<div>
+    <input type="text" [(ngModel)]="person.firstName" />
+    <input type="text" [(ngModel)]="person.lastName" />
+    {{person.firstName}}{{person.lastName}}
+</div>
+<todo-app></todo-app>
